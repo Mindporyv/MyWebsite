@@ -11,3 +11,20 @@ canvas {
   border: 2px solid #fff;
   background-color: #333;
 }
+#mobile-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+#mobile-controls button {
+  padding: 15px 20px;
+  font-size: 24px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
