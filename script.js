@@ -27,6 +27,7 @@ const player = {
   color: "cyan",
   dx: 0,
   dy: 0,
+  speed: 3,
   onGround: false
 };
 
@@ -57,8 +58,8 @@ function update() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Movement
-  if (keys.left) player.dx = -3;
-  else if (keys.right) player.dx = 3;
+  if (keys.left) player.dx = -player.speed;
+  else if (keys.right) player.dx = player.speed;
   else player.dx *= friction;
 
   player.dy += gravity;
