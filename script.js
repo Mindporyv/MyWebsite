@@ -18,7 +18,19 @@ document.addEventListener("keyup", (e) => {
   if (e.key === "ArrowRight") keys.right = false;
   if (e.key === "ArrowUp") keys.up = false;
 });
+// Mobile controls
+document.getElementById("left-btn").addEventListener("touchstart", () => keys.left = true);
+document.getElementById("left-btn").addEventListener("touchend", () => keys.left = false);
 
+document.getElementById("right-btn").addEventListener("touchstart", () => keys.right = true);
+document.getElementById("right-btn").addEventListener("touchend", () => keys.right = false);
+
+document.getElementById("jump-btn").addEventListener("touchstart", () => {
+  if (player.onGround) {
+    player.dy = -10;
+    player.onGround = false;
+  }
+});
 const player = {
   x: 50,
   y: 300,
